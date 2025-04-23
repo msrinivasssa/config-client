@@ -7,14 +7,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RefreshScope
 @RestController
-class configclientController {
+public class ConfigClientController {
 
-	@Value("${message}")
-	private String message;
+    @Value("${message:Hello default}")
+    private String message;
 
-	@GetMapping("/message")
-	public String getMessage() {
-		return message;
-	}
+    @GetMapping("/message")
+    public String getMessage() {
+        return message;
+    }
 
 }
